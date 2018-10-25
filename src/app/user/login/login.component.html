@@ -1,0 +1,40 @@
+
+
+<mat-toolbar style="background-color: #13132f">
+  <mat-toolbar-row>
+    <span><img style="height:50px;"src="../assets/logo.png"></span>
+    <span class="example-fill-remaining-space"></span>
+    <span class="align-center"></span>
+    <span class="example-spacer"></span>
+
+    <button mat-button style="color: white">About</button>
+    <button mat-button style="color: white">Contact</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="main-div">
+<mat-card class="example-card" class="z-depth center"  >
+  <mat-card-header>
+    <mat-card-title>Admin Login</mat-card-title>
+    
+  </mat-card-header>
+  <mat-card-content>
+     
+    <form class="">
+        <div class="example-container">
+            <!-- /img style="height:5vmax;"src="../assets/user.png"> -->
+            <mat-form-field>
+                <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+            </mat-form-field>
+          
+            <mat-form-field>
+                <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
+            </mat-form-field>
+          </div>
+    </form>
+    <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="login()" color="primary">Login</button>
+  </mat-card-actions>
+</mat-card>
+</div>
